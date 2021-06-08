@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rocketsFragment">
+
+    <fragment
+        android:id="@+id/rocketsFragment"
+        android:name="com.datienza.spacex.presentation.view.RocketsFragment"
+        android:label="MembershipPlansDetailsFragment">
+        <action
+            android:id="@+id/action_rocketsFragment_to_rocketInfoFragment"
+            app:destination="@id/rocketInfoFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rocketInfoFragment"
+        android:name="com.datienza.spacex.presentation.view.RocketInfoFragment"
+        android:label="MembershipRetentionOfferFragment">
+        <argument
+            android:name="rocketId"
+            app:argType="string" />
+        <argument
+            android:name="rocketDescription"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

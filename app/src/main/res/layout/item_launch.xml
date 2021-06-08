@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/margin_screen_edge">
+
+    <ImageView
+        android:id="@+id/launch_mission_patch_iv"
+        android:layout_width="@dimen/launch_image_size"
+        android:layout_height="@dimen/launch_image_size"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/launch_mission_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_spacing"
+        android:layout_toEndOf="@id/launch_mission_patch_iv"
+        android:textAppearance="@style/TextAppearance.Spacex.Title"
+        android:textColor="?attr/colorPrimaryDark"
+        app:layout_constraintLeft_toRightOf="@id/launch_mission_patch_iv"
+        app:layout_constraintTop_toTopOf="@id/launch_mission_patch_iv"
+        tools:text="CRS-4" />
+
+    <TextView
+        android:id="@+id/launch_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_spacing"
+        android:layout_marginTop="@dimen/grid_spacing_half"
+        android:layout_toEndOf="@id/launch_mission_patch_iv"
+        app:layout_constraintLeft_toRightOf="@id/launch_mission_patch_iv"
+        app:layout_constraintTop_toBottomOf="@id/launch_mission_name_tv"
+        tools:text="26/04/1985" />
+
+    <TextView
+        android:id="@+id/launch_success_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_spacing"
+        android:layout_marginTop="@dimen/grid_spacing_half"
+        android:layout_toEndOf="@id/launch_mission_patch_iv"
+        app:layout_constraintLeft_toRightOf="@id/launch_mission_patch_iv"
+        app:layout_constraintTop_toBottomOf="@id/launch_date_tv"
+        tools:text="Launch succcesful" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

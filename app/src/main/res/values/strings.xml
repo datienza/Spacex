@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Spacex</string>
+    <string name="no_results">No Results</string>
+    <string name="no_rockets_found">No rockets found</string>
+
+    <!--Rocket item-->
+    <string name="fragment_rockets_title">Spacex</string>
+    <string name="fragments_rocket_info_title">Rocket Info</string>
+    <string name="rockets_list">Rockets list</string>
+    <string name="rocket_country">Country: %1$s</string>
+    <string name="rocket_num_engines">Number of engines: %1$d</string>
+    <string name="active_rockets">Active rockets</string>
+    <string name="ok">ok</string>
+    <string name="welcome">welcome</string>
+    <string name="launch_successful">Launch successful</string>
+    <string name="launch_failed">Launch failed</string>
+    <string name="launches_per_year">Launches per year</string>
+
+</resources>
