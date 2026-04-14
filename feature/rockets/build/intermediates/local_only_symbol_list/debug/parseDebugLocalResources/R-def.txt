@@ -1,0 +1,19 @@
+R_DEF: Internal format may change without notice
+local
+id rocket_country_tv
+id rocket_iv
+id rocket_name_tv
+id rocket_num_engines_tv
+id rockets_list
+id rockets_vf
+id swipeRefreshLayout
+id switchItem
+id toolbar
+layout fragment_rockets
+layout item_rocket
+string active_rockets
+string fragment_rockets_title
+string no_rockets_found
+string rocket_country
+string rocket_num_engines
+string rockets_list

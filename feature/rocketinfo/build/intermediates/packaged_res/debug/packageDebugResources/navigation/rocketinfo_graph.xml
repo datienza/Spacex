@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rocketinfo_graph"
+    app:startDestination="@id/rocketInfoFragment">
+
+    <fragment
+        android:id="@+id/rocketInfoFragment"
+        android:name="com.datienza.spacex.feature.rocketinfo.view.RocketInfoFragment"
+        android:label="RocketInfoFragment">
+        <argument
+            android:name="rocketId"
+            app:argType="string" />
+        <argument
+            android:name="rocketDescription"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

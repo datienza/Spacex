@@ -1,0 +1,25 @@
+com.datienza.spacex.feature.rocketinfo
+color blue_700
+id app_bar_layout
+id collapsing_toolbar
+id launch_date_tv
+id launch_mission_name_tv
+id launch_mission_patch_iv
+id launch_success_tv
+id launch_year_header_tv
+id launches_list
+id nav_graph_ll
+id rocketInfoFragment
+id rocket_description_tv
+id rocket_graph_iv
+id rocketinfo_graph
+id rockets_vf
+id toolbar
+layout fragment_rocket_info
+layout item_launch
+layout item_year_header
+navigation rocketinfo_graph
+string fragments_rocket_info_title
+string launch_failed
+string launch_successful
+string launches_per_year

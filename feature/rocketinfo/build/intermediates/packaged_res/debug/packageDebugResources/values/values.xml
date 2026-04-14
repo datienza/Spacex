@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_700">#485181</color>
+    <string name="fragments_rocket_info_title">Rocket Info</string>
+    <string name="launch_failed">Launch failed</string>
+    <string name="launch_successful">Launch successful</string>
+    <string name="launches_per_year">Launches per year</string>
+</resources>

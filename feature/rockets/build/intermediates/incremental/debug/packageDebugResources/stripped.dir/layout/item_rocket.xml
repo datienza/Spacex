@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/grid_spacing_double">
+
+    <ImageView
+        android:id="@+id/rocket_iv"
+        android:layout_width="@dimen/rockets_image_size"
+        android:layout_height="@dimen/rockets_image_size"
+        android:layout_marginEnd="@dimen/grid_spacing_double"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rocket_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_spacing"
+        app:layout_constraintLeft_toRightOf="@id/rocket_iv"
+        app:layout_constraintTop_toTopOf="@id/rocket_iv"
+        android:textAppearance="@style/TextAppearance.Spacex.Title"
+        android:textColor="?attr/colorPrimaryDark"
+        tools:text="Falcon 1" />
+
+    <TextView
+        android:id="@+id/rocket_country_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grid_spacing"
+        android:layout_marginStart="@dimen/grid_spacing"
+        app:layout_constraintLeft_toRightOf="@id/rocket_iv"
+        app:layout_constraintTop_toBottomOf="@id/rocket_name_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:singleLine="false"
+        tools:text="Country: Spain" />
+
+    <TextView
+        android:id="@+id/rocket_num_engines_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_spacing"
+        android:layout_marginTop="@dimen/grid_spacing"
+        app:layout_constraintLeft_toRightOf="@id/rocket_iv"
+        app:layout_constraintTop_toBottomOf="@id/rocket_country_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Number of engines: 9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

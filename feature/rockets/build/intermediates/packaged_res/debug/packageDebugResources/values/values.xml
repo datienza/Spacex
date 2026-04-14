@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="active_rockets">Active rockets</string>
+    <string name="fragment_rockets_title">Spacex</string>
+    <string name="no_rockets_found">No rockets found</string>
+    <string name="rocket_country">Country: %1$s</string>
+    <string name="rocket_num_engines">Number of engines: %1$d</string>
+    <string name="rockets_list">Rockets list</string>
+</resources>
