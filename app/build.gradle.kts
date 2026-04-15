@@ -31,11 +31,4 @@ dependencies {
     implementation(project(":data:launches"))
     implementation(project(":feature:rockets"))
     implementation(project(":feature:rocketinfo"))
-
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.material)
-    implementation(libs.navigation.fragment.ktx)
-    implementation(libs.navigation.ui.ktx)
-    implementation(libs.timber)
 }

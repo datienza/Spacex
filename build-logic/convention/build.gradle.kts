@@ -2,9 +2,8 @@ plugins {
     `kotlin-dsl`
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+kotlin {
+    jvmToolchain(libs.versions.jvm.get().toInt())
 }
 
 dependencies {
@@ -40,6 +39,10 @@ gradlePlugin {
         register("androidTest") {
             id = "spacex.android.test"
             implementationClass = "AndroidTestConventionPlugin"
+        }
+        register("androidCoroutines") {
+            id = "spacex.android.coroutines"
+            implementationClass = "AndroidCoroutinesConventionPlugin"
         }
     }
 }

@@ -4,6 +4,8 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.create
+import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 import org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper
 
 class AndroidApplicationConventionPlugin : Plugin<Project> {
@@ -12,14 +14,18 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             apply<AppPlugin>()
             apply<KotlinAndroidPluginWrapper>()
 
+            configureAndroidLint()
+
             extensions.configure<ApplicationExtension> {
                 configureAndroid(this)
                 defaultConfig.targetSdk = AndroidVersions.TargetSdk
-                buildFeatures {
-                    viewBinding = true
-                    buildConfig = true
-                }
             }
+
+            configureKotlin()
+            configureKotlinCoroutines()
+            configureTesting()
+
+            extensions.create("wup", AndroidLibraryExtension::class)
         }
     }
 }

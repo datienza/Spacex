@@ -1,30 +1,26 @@
 import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.getByType
+import org.gradle.kotlin.dsl.kotlin
 
 /**
  * Wires up the standard baseline test dependencies for any module.
- *
- * Unit tests:        JUnit4, Mockito-Kotlin, Truth, coroutines-test, arch-core-testing
- * Instrumented tests: Espresso, androidx-test runner
- *
- * Module-specific extras (RxJava, LiveData-testing, etc.) should still be
- * declared manually in each module's build.gradle.kts.
  */
 internal fun Project.configureTesting() {
-    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
-
     dependencies {
-        // Unit tests
-        add("testImplementation", libs.findLibrary("junit").get())
-        add("testImplementation", libs.findLibrary("mockito-kotlin").get())
-        add("testImplementation", libs.findLibrary("google-truth").get())
-        add("testImplementation", libs.findLibrary("kotlinx-coroutines-test").get())
-        add("testImplementation", libs.findLibrary("arch-core-testing").get())
+        "testImplementation"(kotlin("test-junit"))
+        "testImplementation"(libs.library("junit"))
+        "testImplementation"(libs.library("mockito-kotlin"))
+        "testImplementation"(libs.library("google-truth"))
+        "testImplementation"(libs.library("kotlinx-coroutines-test"))
+        "testImplementation"(libs.library("arch-core-testing"))
+        "testImplementation"(libs.library("turbine"))
 
-        // Instrumented tests
-        add("androidTestImplementation", libs.findLibrary("espresso-core").get())
-        add("androidTestImplementation", libs.findLibrary("androidx-test-runner").get())
+        onAndroid {
+            "androidTestImplementation"(kotlin("test-junit"))
+            "androidTestImplementation"(libs.library("kotlinx-coroutines-test"))
+            "androidTestImplementation"(libs.library("espresso-core"))
+            "androidTestImplementation"(libs.library("androidx-test-runner"))
+            "androidTestImplementation"(libs.library("turbine"))
+        }
     }
 }
