@@ -13,11 +13,9 @@ import dagger.hilt.android.scopes.ActivityScoped
 @InstallIn(ActivityComponent::class)
 interface MainActivityModule {
 
-    @ActivityScoped
     @Binds
     fun bindsMainActivityRouter(mainActivityRouterImpl: MainActivityRouterImpl): MainActivityRouter
 
-    @ActivityScoped
     @Binds
     fun bindsNavigateBackRouter(mainActivityRouterImpl: MainActivityRouterImpl): NavigateBackRouter
 }

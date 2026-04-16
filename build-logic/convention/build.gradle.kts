@@ -17,32 +17,16 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = "spacex.android.application"
+            id = "com.spacex.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidLibrary") {
-            id = "spacex.android.library"
+            id = "com.spacex.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
-        register("androidFeature") {
-            id = "spacex.android.feature"
-            implementationClass = "AndroidFeatureConventionPlugin"
-        }
-        register("androidHilt") {
-            id = "spacex.android.hilt"
-            implementationClass = "AndroidHiltConventionPlugin"
-        }
-        register("androidCompose") {
-            id = "spacex.android.compose"
-            implementationClass = "AndroidComposeConventionPlugin"
-        }
-        register("androidTest") {
-            id = "spacex.android.test"
-            implementationClass = "AndroidTestConventionPlugin"
-        }
-        register("androidCoroutines") {
-            id = "spacex.android.coroutines"
-            implementationClass = "AndroidCoroutinesConventionPlugin"
+        register("jvmLibrary") {
+            id = "com.spacex.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
         }
     }
 }

@@ -21,11 +21,12 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 defaultConfig.targetSdk = AndroidVersions.TargetSdk
             }
 
-            configureKotlin()
+            // Java + Kotlin toolchain
+            configureJava()
             configureKotlinCoroutines()
             configureTesting()
 
-            extensions.create("wup", AndroidLibraryExtension::class)
+            extensions.create("wup", AndroidApplicationExtension::class)
         }
     }
 }

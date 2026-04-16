@@ -7,6 +7,7 @@ hilt                 = "2.56.2"
 kotlinxSerialization = "1.7.3"
 retrofit             = "2.11.0"
 okhttp               = "4.12.0"
+eithernet            = "2.0.0"
 turbine              = "1.2.0"
 lifecycle            = "2.8.7"
 navigation           = "2.8.5"
@@ -70,6 +71,9 @@ hilt-compiler             = { group = "com.google.dagger",   name = "hilt-compil
 hilt-android-testing      = { group = "com.google.dagger",   name = "hilt-android-testing",      version.ref = "hilt" }
 hilt-navigation-fragment  = { group = "androidx.hilt",       name = "hilt-navigation-fragment",  version = "1.2.0" }
 
+# KSP API (for local KSP processors)
+ksp-api = { group = "com.google.devtools.ksp", name = "symbol-processing-api", version.ref = "ksp" }
+
 # Kotlinx Serialization
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 
@@ -79,6 +83,10 @@ retrofit-converter-kotlinx-serialization = { group = "com.squareup.retrofit2", n
 
 okhttp-core    = { group = "com.squareup.okhttp3", name = "okhttp",               version.ref = "okhttp" }
 okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor",  version.ref = "okhttp" }
+
+# EitherNet
+eithernet                      = { group = "com.slack.eithernet", name = "eithernet",                      version.ref = "eithernet" }
+eithernet-integration-retrofit = { group = "com.slack.eithernet", name = "eithernet-integration-retrofit",  version.ref = "eithernet" }
 
 # Image Loading
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
@@ -112,11 +120,17 @@ androidx-test-runner = { group = "androidx.test",               name = "runner",
 turbine              = { group = "app.cash.turbine",            name = "turbine",          version.ref = "turbine" }
 
 [plugins]
+# Convention plugins
+spacex-android-application = { id = "com.spacex.android.application" }
+spacex-android-library     = { id = "com.spacex.android.library" }
+spacex-jvm-library         = { id = "com.spacex.jvm.library" }
+
+# Third-party plugins
 android-application  = { id = "com.android.application",                    version.ref = "agp" }
 android-library      = { id = "com.android.library",                        version.ref = "agp" }
 kotlin-android       = { id = "org.jetbrains.kotlin.android",               version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization",  version.ref = "kotlin" }
 hilt                 = { id = "com.google.dagger.hilt.android",             version.ref = "hilt" }
 ksp                  = { id = "com.google.devtools.ksp",                    version.ref = "ksp" }
-navigation-safeargs  = { id = "androidx.navigation.safeargs.kotlin",         version.ref = "navigation" }
-kotlin-compose       = { id = "org.jetbrains.kotlin.plugin.compose",         version.ref = "kotlin" }
+navigation-safeargs  = { id = "androidx.navigation.safeargs.kotlin",        version.ref = "navigation" }
+kotlin-compose       = { id = "org.jetbrains.kotlin.plugin.compose",        version.ref = "kotlin" }

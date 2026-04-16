@@ -1,7 +1,3 @@
-package extensions
-
-import configureCompose
-
 interface ComposeExtension : BaseExtension {
 
     fun composeUi(

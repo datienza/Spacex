@@ -8,9 +8,14 @@ import com.datienza.spacex.data.launches.model.LaunchResponseDTO
 import com.datienza.spacex.data.launches.model.LaunchesOptionsDTO
 import com.datienza.spacex.data.launches.model.LaunchesQueryDTO
 import com.datienza.spacex.data.launches.model.LaunchesRequestDTO
+import com.datienza.spacex.hiltbinder.ContributesBinding
+import dagger.hilt.components.SingletonComponent
 import io.reactivex.rxjava3.core.Single
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@ContributesBinding(SingletonComponent::class)
+@Singleton
 class LaunchesRepositoryImpl @Inject constructor(
     private val api: LaunchesApi,
     private val mapper: Mapper<LaunchResponseDTO, Launch>,

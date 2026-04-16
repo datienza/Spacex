@@ -1,8 +1,4 @@
-package extensions
-
-import configureHilt
-
-interface HiltExtension: BaseExtension {
+interface HiltExtension : BaseExtension {
 
     fun hilt() = with(project) {
         configureHilt()

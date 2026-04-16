@@ -7,6 +7,7 @@ pluginManagement {
     }
 }
 
+@Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -26,3 +27,5 @@ include(":data:launches")
 include(":core:network")
 include(":core:model")
 include(":core:common")
+include(":lib:hilt-binder:annotations")
+include(":lib:hilt-binder:compiler")

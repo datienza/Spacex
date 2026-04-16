@@ -22,7 +22,8 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 }
             }
 
-            configureKotlin()
+            // Java + Kotlin toolchain
+            configureJava()
             configureKotlinCoroutines()
             configureTesting()
 

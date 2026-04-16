@@ -23,7 +23,9 @@ internal fun Project.configureHilt() {
 
     dependencies {
         "implementation"(libs.library("hilt-android"))
+        "implementation"(project(":lib:hilt-binder:annotations"))
         "ksp"(libs.library("hilt-compiler"))
+        "ksp"(project(":lib:hilt-binder:compiler"))
         "kspTest"(libs.library("hilt-compiler"))
 
         onAndroid {

@@ -1,7 +1,3 @@
-package extensions
-
-import configureSerialisation
-
 interface KotlinSerialisationExtension : BaseExtension {
 
     fun serialisation(

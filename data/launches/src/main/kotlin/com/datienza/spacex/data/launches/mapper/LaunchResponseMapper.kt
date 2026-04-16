@@ -8,8 +8,11 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
+import com.datienza.spacex.hiltbinder.ContributesBinding
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Inject
 
+@ContributesBinding(SingletonComponent::class)
 class LaunchResponseMapper @Inject constructor() : Mapper<LaunchResponseDTO, Launch> {
 
     private companion object {

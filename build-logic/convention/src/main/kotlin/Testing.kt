@@ -12,14 +12,11 @@ internal fun Project.configureTesting() {
         "testImplementation"(libs.library("mockito-kotlin"))
         "testImplementation"(libs.library("google-truth"))
         "testImplementation"(libs.library("kotlinx-coroutines-test"))
-        "testImplementation"(libs.library("arch-core-testing"))
         "testImplementation"(libs.library("turbine"))
 
         onAndroid {
             "androidTestImplementation"(kotlin("test-junit"))
             "androidTestImplementation"(libs.library("kotlinx-coroutines-test"))
-            "androidTestImplementation"(libs.library("espresso-core"))
-            "androidTestImplementation"(libs.library("androidx-test-runner"))
             "androidTestImplementation"(libs.library("turbine"))
         }
     }

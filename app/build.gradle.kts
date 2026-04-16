@@ -1,7 +1,9 @@
 plugins {
-    id("spacex.android.application")
-    id("spacex.android.hilt")
-    alias(libs.plugins.navigation.safeargs)
+    alias(libs.plugins.spacex.android.application)
+}
+
+wup {
+    hilt()
 }
 
 android {
