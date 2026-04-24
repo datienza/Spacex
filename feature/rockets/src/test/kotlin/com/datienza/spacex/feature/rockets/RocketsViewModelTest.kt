@@ -4,7 +4,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.datienza.spacex.core.common.RxSynchronizeSchedulersRule
 import com.datienza.spacex.core.model.Rocket
 import com.datienza.spacex.data.rockets.usecase.GetRocketsUseCase
-import com.datienza.spacex.feature.rockets.viewmodel.RocketsViewModel
+import com.datienza.spacex.feature.rockets.ui.RocketsViewModel
 import com.jraska.livedata.test
 import io.reactivex.rxjava3.core.Single
 import org.junit.Rule

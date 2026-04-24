@@ -4,4 +4,5 @@
     <string name="launch_successful">Launch successful</string>
     <string name="launch_failed">Launch failed</string>
     <string name="launches_per_year">Launches per year</string>
+    <string name="no_rockets_found">No data found</string>
 </resources>

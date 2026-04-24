@@ -1,10 +1,14 @@
 plugins {
-    alias(libs.plugins.spacex.jvm.library)
+    alias(libs.plugins.spacex.android.library)
 }
 
 wup {
     hilt()
     serialisation()
+}
+
+android {
+    namespace = "com.datienza.spacex.core.network"
 }
 
 dependencies {

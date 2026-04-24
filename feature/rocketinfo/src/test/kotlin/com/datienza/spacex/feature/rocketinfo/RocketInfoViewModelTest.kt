@@ -5,7 +5,7 @@ import com.datienza.spacex.core.common.RxSynchronizeSchedulersRule
 import com.datienza.spacex.core.model.Launch
 import com.datienza.spacex.data.launches.usecase.GetLaunchesUseCase
 import com.datienza.spacex.feature.rocketinfo.model.LaunchItemContent
-import com.datienza.spacex.feature.rocketinfo.viewmodel.RocketInfoViewModel
+import com.datienza.spacex.feature.rocketinfo.ui.RocketInfoViewModel
 import com.jraska.livedata.test
 import io.reactivex.rxjava3.core.Single
 import org.junit.Rule

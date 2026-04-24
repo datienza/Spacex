@@ -1,15 +1,21 @@
 package com.datienza.spacex.presentation.view
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.datienza.spacex.R
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.material3.MaterialTheme
+import com.datienza.spacex.navigation.SpacexNavGraph
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContent {
+            MaterialTheme {
+                SpacexNavGraph()
+            }
+        }
     }
 }

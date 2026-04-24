@@ -1,20 +1,15 @@
-import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.dependencies
-import org.jetbrains.kotlin.compose.compiler.gradle.ComposeCompilerGradleSubplugin
 
 /**
  * Applies the Compose compiler plugin, enables the build feature, and wires up dependencies.
  *
- * @param extension  the Android [CommonExtension] to enable compose on.
  * @param exportDependencies  if true, uses `api` so Compose types are visible to module consumers.
- * @param useMaterial  whether to include Material 3 — design-system modules may set this to false.
  */
 internal fun Project.configureCompose(
     exportDependencies: Boolean = false,
 ) {
-    apply<ComposeCompilerGradleSubplugin>()
+    pluginManager.apply("org.jetbrains.kotlin.plugin.compose")
 
     dependencies {
         configure(exportDependencies)(platform(libs.library("compose-bom")))
@@ -44,6 +39,7 @@ private fun composeLibraries() = buildList {
     add("lifecycle-runtime-compose")
     add("activity-compose")
     add("compose-material3")
+    add("compose-material-icons")
 }
 
 /** `"api"` when [export] is true, `"implementation"` otherwise. */

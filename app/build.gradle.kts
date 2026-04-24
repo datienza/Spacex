@@ -4,6 +4,7 @@ plugins {
 
 wup {
     hilt()
+    composeUi()
 }
 
 android {
@@ -33,4 +34,7 @@ dependencies {
     implementation(project(":data:launches"))
     implementation(project(":feature:rockets"))
     implementation(project(":feature:rocketinfo"))
+
+    implementation(libs.navigation.compose)
+    implementation(libs.hilt.navigation.compose)
 }
